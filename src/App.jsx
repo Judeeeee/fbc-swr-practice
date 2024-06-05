@@ -12,8 +12,8 @@ function App() {
 
   const { data, error, isLoading } = useSWR(url, fetcher);
 
-  if (isLoading) return "Loading...";
   if (error) return "Failed to load.";
+  if (isLoading) return "Loading...";
   if (data) return `Status: ${data.description}`;
 }
 
