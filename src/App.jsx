@@ -14,7 +14,7 @@ function App() {
 
   if (isLoading) return "Loading...";
   if (error) return "Failed to load.";
-  if (data) return "Status: OK";
+  if (data) return `Status: ${data.description}`;
 }
 
 export default App;
